@@ -77,14 +77,17 @@ function mySort(_arr){
 function summ(_arr){
     let sum1 = 0; sum2 = 0;
     let arr1=[], arr2 = [];
+    
     for (let i = 0; i < _arr.length; i++) {
-        if(sum1<=sum2){
-            sum1+=_arr[i].val;
-            arr1.push(_arr[i]);
+        sum1+=_arr[i].val;
+    }    
+    for (let i = 0; i < _arr.length; i++) {
+        if(sum1>sum2){
+            sum2+=_arr[i].val;
+            arr2.push(_arr[i]);
         }
         else
         {
-            sum2+=_arr[i].val;
             arr2.push(_arr[i]);
         }
     }
