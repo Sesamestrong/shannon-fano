@@ -84,11 +84,12 @@ function summ(_arr){
     for (let i = 0; i < _arr.length; i++) {
         if(sum1>sum2){
             sum2+=_arr[i].val;
+			sum1-=_arr[i].val;
             arr2.push(_arr[i]);
         }
         else
-        {
-            arr2.push(_arr[i]);
+        {		
+			arr1.push(_arr[i]);            
         }
     }
     if(arr1.length>1){
